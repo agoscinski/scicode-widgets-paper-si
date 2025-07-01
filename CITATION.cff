@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Used for referencing the figures of the scicode-widgets publication"
+title: "scicode-widgets: Supplementary code for figures"
+version: "1"
+doi: "10.5281/zenodo.15783261"
+date-released: 2025-07-01
+authors:
+  - family-names: "Goscinski"
+    given-names: "Alexander"
+  - family-names: "Braid"
+    given-names: "Taylor James"
+  - family-names: "Prado"
+    given-names: "João"
+  - family-names: "Suman"
+    given-names: "Divya"
+  - family-names: "Sodjargal"
+    given-names: "Tulga-Erdene"
+  - family-names: "Bonella"
+    given-names: "Sara"
+  - family-names: "Pizzi"
+    given-names: "Giovanni"
+  - family-names: "Ceriotti"
+    given-names: "Michele"
