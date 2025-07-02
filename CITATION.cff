@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Used for referencing the figures of the scicode-widgets publication"
 title: "scicode-widgets: Supplementary code for figures"
 version: "1"
-doi: "10.5281/zenodo.15783535"
+doi: "10.5281/zenodo.15783260"
 date-released: 2025-07-01
 authors:
   - family-names: "Goscinski"
