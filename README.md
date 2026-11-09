@@ -1,7 +1,13 @@
-This repository contains only the figures of the _scicode-widgets_ paper, the repository of the package _scicode-widgets_ can be found at https://github.com/osscar-org/scicode-widgets. The environment can be recreated using.
+This repository contains the figures of the _scicode-widgets_ paper. The package repository is https://github.com/osscar-org/scicode-widgets.
 
-```
-pip install -r requirements.txt
+## Environment
+
+Use Python 3.12 and install the pinned dependencies in an isolated environment:
+
+```sh
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
 ```
 
-It was tested with Python 3.11.
+`requirements.txt` contains the notebook dependencies. It pins direct dependencies, not the complete transitive dependency tree.
