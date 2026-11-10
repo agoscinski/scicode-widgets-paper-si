@@ -1,0 +1,8 @@
+# Notebook dependencies (Python 3.12).
+# Figure-generation tooling is maintained separately in .figures/.
+scwidgets==0.2.3
+widget-code-input==4.0.19
+ipywidgets==8.1.6
+numpy==2.3.5
+matplotlib==3.10.1
+ipykernel==6.30.1

@@ -1,0 +1,10 @@
+# Figure-generation dependencies, including the notebook environment.
+# Install: python -m pip install -r .figures/requirements.txt
+# Then: python -m playwright install chromium
+-r ../requirements.txt
+nbclient==0.10.2
+nbconvert==7.16.6
+nbformat==5.10.4
+jupyter-client==8.6.3
+playwright==1.61.0
+pygments==2.19.2
