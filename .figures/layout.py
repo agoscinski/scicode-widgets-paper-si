@@ -116,9 +116,22 @@ LAYOUT4 = r'''() => {
    if(!e) throw Error('Missing widget element');
    stage.appendChild(e); e.style.cssText += `;position:absolute!important;left:${x}px;top:${y}px;width:${w}px;${h ? 'height:'+h+'px;' : ''}margin:0!important;padding:0!important;`;
  }
+ // Keep text exercises in normal flow: display math includes limits below
+ // the baseline, so a fixed textarea top can overlap the arg-min subscript.
+ function textAnswer(root,y,width,height) {
+   const flow=document.createElement('div');
+   place(flow,10,y,510);
+   flow.style.display='flex';
+   flow.style.flexDirection='column';
+   flow.style.gap='8px';
+   const description=root.querySelector('.exercise-description');
+   const textarea=root.querySelector('.widget-textarea');
+   description.style.cssText+=';width:510px;margin:0!important;padding:0!important;flex:none;';
+   textarea.style.cssText+=`;width:${width}px;height:${height}px;margin:0!important;padding:0!important;flex:none;`;
+   flow.append(description,textarea);
+ }
  place(roots[0].querySelector('.exercise-title'),10,5,520);
- place(roots[0].querySelector('.exercise-description'),10,35,510);
- place(roots[0].querySelector('.widget-textarea'),10,131,418,49);
+ textAnswer(roots[0],35,418,49);
  place(roots[1].querySelector('.exercise-title'),9,225,520);
  place(roots[1].querySelector('.exercise-description'),10,268,510);
  place(roots[1].querySelector('.widget-code-input-signature').parentElement,12,384,524);
@@ -128,8 +141,7 @@ LAYOUT4 = r'''() => {
  place(roots[1].querySelector('[data-mime-type="application/vnd.jupyter.stdout"]'),17,656,510);
  place(roots[1].querySelector('[data-mime-type="image/png"]'),4,679.7,470);
  place(roots[2].querySelector('.exercise-title'),10,1038,520);
- place(roots[2].querySelector('.exercise-description'),10,1068,510);
- place(roots[2].querySelector('.widget-textarea'),10,1109,457,48);
+ textAnswer(roots[2],1068,457,48);
  for(const child of [...document.body.children]) if(child!==stage && child.tagName!=='SCRIPT') child.style.display='none';
 }'''
 
